@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Михаил Киселев](https://up.htmlacademy.ru/adaptive/19/user/1335517).
-* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
+* Студент: [Михаил  Киселев](https://up.htmlacademy.ru/adaptive/19/user/1335517).
+* Наставник: [Екатерина  Комнатная](https://htmlacademy.ru/profile/id215761).
 
 ---
 
