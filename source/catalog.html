@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="#" alt="Логотип магазина Mishka">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a>Каталог товаров</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a href="#">Вязание на заказ</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Поиск по сайту</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__title">Каталог товаров</h1>
+      <div>
+        <ul class="page-main__catalog catalog">
+          <li class="catalog__item item">
+            <img class="item__image" src="#" alt="Зайчик-попрыгайчик">
+            <h3 class="item__title">Зайчик-попрыгайчик</h3>
+            <p class="item__info">Рост 30 см, вес 200 г</p>
+            <div>
+              <p class="sale__price">1 200 руб.</p>
+              <button class="sale__button">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="item__image" src="#" alt="Корзинка для белья">
+            <h3 class="item__title">Корзинка для белья</h3>
+            <p class="item__info">Диаметр 15 см, высота 10 см</p>
+            <div>
+              <p class="sale__price">690 руб.</p>
+              <button class="sale__button">Купить</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="item__image" src="#" alt="Большая корзинка для игрушек">
+            <h3 class="item__title">Большая корзинка для игрушек</h3>
+            <p class="item__info">Диаметр 30 см, высота 30 см</p>
+            <div class="item__sale sale">
+              <p class="sale__price">1 500 руб.</p>
+              <button class="sale__button">Купить</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="production">
+        <h2 class="production__title">Процесс производства</h2>
+        <img class="production__video" src="#" alt="Процесс производства продукции">
+        <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="button production__button" href="#">Сделать заказ</a>
+      </div>      
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">Мы в Instagram</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">Мы в Facebook</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">Мы в Twitter</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <span class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></span>
+      </div>
+    </footer>    
+    <section class="modal-window">
+      <div class="modal-window__wrapper">
+        <h2 class="modal-window__heading">Добавить в корзину</h2>
+        <span class="modal-window__small-text">Выберите размер:</span>
+        <ul class="modal-window__size-selection size-selection">
+          <li class="size-selection__item" aria-label="маленький размер">S</li>
+          <li class="size-selection__item" aria-label="средний размер">M</li>
+          <li class="size-selection__item" aria-label="большой размер">L</li>
+        </ul>
+        <button class="modal-window__button">Добавить</button>
+      </div>
+    </section>
+  </body>
+</html>
