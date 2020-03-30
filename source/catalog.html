@@ -15,16 +15,16 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a>Каталог товаров</a>
+              <a class="link">Каталог товаров</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a href="#">Вязание на заказ</a>
+              <a class="link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Поиск по сайту</a>
+              <a class="link" href="#">Поиск по сайту</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Корзина: пока пуста</a>
+              <a class="link" href="#">Корзина: пока пуста</a>
             </li>
           </ul>
         </div>
@@ -36,29 +36,29 @@
         <ul class="page-main__catalog catalog">
           <li class="catalog__item item">
             <img class="item__image" src="#" alt="Зайчик-попрыгайчик">
-            <h3 class="item__title">Зайчик-попрыгайчик</h3>
+            <h3 class="item__title"><a class="link">Зайчик-попрыгайчик</a></h3>
             <p class="item__info">Рост 30 см, вес 200 г</p>
-            <div>
-              <p class="sale__price">1 200 руб.</p>
-              <button class="sale__button">Купить</button>
+            <div class="item__sale">
+              <p class="item__price">1 200 руб.</p>
+              <a class="item__button" href="#">Купить</a>
             </div>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item item">
             <img class="item__image" src="#" alt="Корзинка для белья">
-            <h3 class="item__title">Корзинка для белья</h3>
+            <h3 class="item__title"><a class="link">Корзинка для белья</a></h3>
             <p class="item__info">Диаметр 15 см, высота 10 см</p>
-            <div>
-              <p class="sale__price">690 руб.</p>
-              <button class="sale__button">Купить</button>
+            <div class="item__sale">
+              <p class="item__price">690 руб.</p>
+              <a class="item__button" href="#">Купить</a>
             </div>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item item">
             <img class="item__image" src="#" alt="Большая корзинка для игрушек">
-            <h3 class="item__title">Большая корзинка для игрушек</h3>
+            <h3 class="item__title"><a class="link">Большая корзинка для игрушек</a></h3>
             <p class="item__info">Диаметр 30 см, высота 30 см</p>
-            <div class="item__sale sale">
-              <p class="sale__price">1 500 руб.</p>
-              <button class="sale__button">Купить</button>
+            <div class="item__sale">
+              <p class="item__price">1 500 руб.</p>
+              <a class="item__button" href="#">Купить</a>
             </div>
           </li>
         </ul>
@@ -66,8 +66,9 @@
       <div class="production">
         <h2 class="production__title">Процесс производства</h2>
         <img class="production__video" src="#" alt="Процесс производства продукции">
+        <button class="production__start-video">Запустить видео</button>
         <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="button production__button" href="#">Сделать заказ</a>
+        <a class="link button production__button" href="#">Сделать заказ</a>
       </div>      
     </main>
     <footer class="page-footer">
@@ -92,13 +93,15 @@
     <section class="modal-window">
       <div class="modal-window__wrapper">
         <h2 class="modal-window__heading">Добавить в корзину</h2>
-        <span class="modal-window__small-text">Выберите размер:</span>
-        <ul class="modal-window__size-selection size-selection">
-          <li class="size-selection__item" aria-label="маленький размер">S</li>
-          <li class="size-selection__item" aria-label="средний размер">M</li>
-          <li class="size-selection__item" aria-label="большой размер">L</li>
-        </ul>
-        <button class="modal-window__button">Добавить</button>
+        <form class="modal-window__form size-selection" action="https://echo.htmlacademy.ru" method="post">
+          <span class="size-selection__small-text">Выберите размер:</span>
+          <div class="size-selection__wrapper">
+            <input class="size-selection__radio" type="radio" name="type" id="S" value="S" aria-label="маленький размер"><label for="S"> S </label>
+            <input class="size-selection__radio" type="radio" name="type" id="M" value="M" aria-label="средний размер"><label for="M"> М </label>
+            <input class="size-selection__radio" type="radio" name="type" id="L" value="L" aria-label="большой размер"><label for="L"> L </label>
+          </div>        
+          <button class="button size-selection__button" type="submit">Добавить</button>
+        </form>
       </div>
     </section>
   </body>
