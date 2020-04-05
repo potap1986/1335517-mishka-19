@@ -1,27 +1,24 @@
 .contacts {
-    padding: 44px 30px 40px 30px;
-    margin: 0;
-    font-family: "OpenSans", "Arial", sans-serif;
-    &__title {
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 1.67;
-        text-align: left;
-        color: black;
-    }
-    &__cell {
-        font-size: 15px;
-        font-weight: normal;
-        line-height: 1.6;
-        text-align: left;
-        color: #444444;
-    }
-    &__link {
-        text-decoration: none;
-        color: #444444;
-    }
-    &__button {
-        padding: 20px 52px;
-    }
+  padding: 44px 30px 40px 30px;
+  margin: 0;
+  font-family: @font;
+}
 
+.contacts__title {
+  .font-style (18px, bold, 1.67, left);
+  color: black;
+}
+
+.contacts__cell {
+  .font-style (15px, normal, 2, left);
+  color: #444444;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: #444444;
+}
+
+.contacts__button {
+  padding: 20px 52px;
 }

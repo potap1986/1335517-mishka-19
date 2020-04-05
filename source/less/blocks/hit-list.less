@@ -1,45 +1,36 @@
 .hit-list {
-    padding: 34px 30px;
-    margin: 0;
-    font-family: "OpenSans", "Arial", sans-serif;
-    &__title {
-        font-size: 25px;
-        font-weight: bold;
-        line-height: 1.2;
-        text-align: left;
-        color: black;        
-    }
-    &__mark {
-        font-size: 17px;
-        font-weight: bold;
-        line-height: 1.18;
-        text-align: left;
-        text-transform: uppercase;
-        color: #63d1bb;
-    }
-    &__text {
-        font-size: 15px;
-        font-weight: normal;
-        line-height: 1.6;
-        text-align: left;
-        color: #444444;
-    }
-    &__cell {
-        font-size: 15px;
-        font-weight: normal;
-        line-height: 1.6;
-        text-align: left;
-        color: #444444;
-    }
-    &__price {
-        padding: 29px 68px;
-        font-size: 17px;
-        font-weight: bold;
-        line-height: 1.41;
-        text-align: center;
-        color: #444444;
-    }
-    &__button {
-        padding: 20px 84px;
-    }
+  padding: 34px 30px;
+  margin: 0;
+  font-family: @font;
+}
+
+.hit-list__title {
+  .font-style (25px, bold, 1.2, left);
+  color: black;
+}
+
+.hit-list__mark {
+  .font-style (17px, bold, 1.18, left);
+  text-transform: uppercase;
+  color: #63d1bb;
+}
+
+.hit-list__text {
+  .font-style (15px, normal, 1.6, left);
+  color: #444444;
+}
+
+.hit-list__cell {
+  .font-style (15px, normal, 1.6, left);
+  color: #444444;
+}
+
+.hit-list__price {
+  padding: 29px 68px;
+  .font-style (17px, bold, 1.41, center);
+  color: #444444;
+}
+
+.hit-list__button {
+  padding: 20px 84px;
 }

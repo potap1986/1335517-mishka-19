@@ -1,16 +1,15 @@
 .catalog {
-    padding: 0;
-    margin: 0 30px;
-    font-family: "OpenSans", "Arial", sans-serif;
-    list-style: none;
-    &__image {
-        margin-bottom: 31px;
-        width: 260px;
-        height: 195px;
-    }
-    &__video {
-        width: 260px;
-        height: 150px;
-    }
+  padding: 0;
+  margin: 0 30px;
+  font-family: @font;
+  list-style: none;
+}
 
+.catalog__image {
+  margin-bottom: 31px;
+  .size (260px, 195px);
+}
+
+.catalog__video {
+  .size (260px, 150px);
 }

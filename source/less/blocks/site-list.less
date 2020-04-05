@@ -1,15 +1,15 @@
 .site-list {
-    list-style: none;
-    margin: 0;
-    &__link {
-        padding-top: 32px;
-        padding-left: 76px;
-        text-decoration: none;
-        font-family: "OpenSans", "Arial", sans-serif;
-        font-size: 17px;
-        font-weight: bold;
-        line-height: 1.41;
-        text-align: left;
-        color: black;
-    }
+  list-style: none;
+  margin: 0;
+  .min-size(320px, 79px*4);
+}
+
+.site-list__link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-left: 76px;
+  text-decoration: none;
+  font-family: @font;
+  .font-style (17px, bold, 1.41, left);
+  color: black;
 }

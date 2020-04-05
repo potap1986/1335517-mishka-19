@@ -1,22 +1,19 @@
 .advantages {
-    padding: 34px 30px;
-    margin: 0;
-    font-family: "OpenSans", "Arial", sans-serif;
-    &__title {
-        font-size: 25px;
-        font-weight: bold;
-        line-height: 1.2;
-        text-align: left;
-        color: black;
-    }
-    &__list {
-        list-style: none;
-    }
-    &__item {
-        font-size: 17px;
-        font-weight: bold;
-        line-height: 1.18;
-        text-align: left;
-        color: black;
-    }
+  padding: 34px 30px;
+  margin: 0;
+  font-family: @font;
+}
+
+.advantages__title {
+  .font-style (25px, bold, 1.2, left);
+  color: black;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
+.advantages__item {
+  .font-style (17px, bold, 1.18, left);
+  color: black;
 }

@@ -1,31 +1,35 @@
 .form {
-    padding: 29px 30px 55px;
-    margin: 0;
-    font-family: "OpenSans", "Arial", sans-serif;
-    background-color: #ffffff;
-    &__paragraph {
-        font-size: 17px;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 0.94;
-        text-align: left;
-        color: #63d1bb;
-    }
-    &__label {
-        font-size: 17px;
-        font-weight: bold;
-        line-height: 1.06;
-        text-align: left;
-        color: black;
-    }
-    &__legend {
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 1.14;
-        text-align: left;
-        color: #444444;
-    }
-    &__button {
-        padding: 20px 47px;
-    }
+  padding: 29px 30px 55px;
+  margin: 0;
+  font-family: @font;
+  background-color: #ffffff;
+}
+
+.form__paragraph {
+  .font-style (17px, bold, 0.94, left);
+  text-transform: uppercase;
+  color: #63d1bb;
+}
+
+.form__label {
+  .font-style (17px, bold, 1.06, left);
+  color: black;
+}
+
+.form__legend {
+  .font-style (14px, normal, 1.14, left);
+  color: #444444;
+}
+
+.form__input {
+  .font-style (19px, normal, 0.95, left);
+  color: #444444;
+  &::placeholder {
+    opacity: 1;
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.form__button {
+  padding: 20px 46px;
 }

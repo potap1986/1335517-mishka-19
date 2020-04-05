@@ -1,37 +1,37 @@
 .reviews {
-    padding: 45px 30px;
-    margin: 0;
-    font-family: "OpenSans", "Arial", sans-serif;
-    &__title {
-        font-size: 25px;
-        font-weight: bold;
-        line-height: 1.2;
-        text-align: left;
-        color: black;
-    }
-    &__text {
-        font-size: 15px;
-        font-style: normal;
-        line-height: 2;
-        text-align: left;
-        color: #444444;
-    }
-    &__author {
-        font-size: 17px;
-        text-align: left;
-        &--name {
-            font-weight: bold;
-            line-height: 1.41;
-            font-style: normal;
-            color: black;
-        }
-        &--email {
-            font-weight: normal;
-            line-height: 1.76;
-            color: #444444;
-        }
-    }
-    &__button {
-        padding: 20px 80px;
-    }
+  padding: 45px 30px;
+  margin: 0;
+  font-family: @font;
+}
+
+.reviews__title {
+  .font-style (25px, bold, 1.2, left);
+  color: black;
+}
+
+.reviews__text {
+  .font-style (15px, normal, 2, left);
+  color: #444444;
+}
+
+.reviews__author {
+  font-size: 17px;
+  text-align: left;
+
+  &--name {
+    font-weight: bold;
+    line-height: 1.41;
+    font-style: normal;
+    color: black;
+  }
+
+  &--email {
+    font-weight: normal;
+    line-height: 1.76;
+    color: #444444;
+  }
+}
+
+.reviews__button {
+  padding: 20px 80px;
 }
