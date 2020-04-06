@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -69,7 +69,7 @@
         <button class="production__start-video">Запустить видео</button>
         <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="button production__button" href="#">Сделать заказ</a>
-      </div>      
+      </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__social social">
@@ -89,17 +89,17 @@
       <div class="page-footer__copyright copyright">
         <span class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></span>
       </div>
-    </footer>    
+    </footer>
     <section class="modal-window">
       <div class="modal-window__wrapper">
-        <h2 class="modal-window__heading">Добавить в корзину</h2>
+        <h2 class="modal-window__title">Добавить в корзину</h2>
         <form class="modal-window__form size-selection" action="https://echo.htmlacademy.ru" method="post">
           <span class="size-selection__small-text">Выберите размер:</span>
           <div class="size-selection__wrapper">
-            <input class="size-selection__radio" type="radio" name="type" id="S" value="S" aria-label="маленький размер"><label for="S"> S </label>
-            <input class="size-selection__radio" type="radio" name="type" id="M" value="M" aria-label="средний размер"><label for="M"> М </label>
-            <input class="size-selection__radio" type="radio" name="type" id="L" value="L" aria-label="большой размер"><label for="L"> L </label>
-          </div>        
+            <input class="size-selection__radio" type="radio" name="type" id="S" value="S" aria-label="маленький размер"><label class="size-selection__label" for="S"> S </label>
+            <input class="size-selection__radio" type="radio" name="type" id="M" value="M" aria-label="средний размер"><label class="size-selection__label" for="M"> М </label>
+            <input class="size-selection__radio" type="radio" name="type" id="L" value="L" aria-label="большой размер"><label class="size-selection__label" for="L"> L </label>
+          </div>
           <button class="button size-selection__button" type="submit">Добавить</button>
         </form>
       </div>
