@@ -19,3 +19,15 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.container {
+  min-width: 320px;
+  padding: 0 30px;
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    min-width: @desktop-width;
+  }
+}

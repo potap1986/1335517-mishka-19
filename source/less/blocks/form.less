@@ -22,6 +22,7 @@
 }
 
 .form__input {
+  display: block;
   .font-style (19px, normal, 0.95, left);
   color: #444444;
   &::placeholder {
@@ -30,6 +31,22 @@
   }
 }
 
-.form__button {
-  padding: 20px 46px;
+.form__radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.form__user-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__legend {
+  display: flex;
 }
