@@ -2,6 +2,12 @@
   margin: 0;
   .min-size (320px, 79px);
   background-color: #ffffff;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (min-width: @desktop-width) {
+  }
 }
 
 .page-header__logo-image {

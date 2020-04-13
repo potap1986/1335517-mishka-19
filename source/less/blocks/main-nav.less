@@ -5,8 +5,35 @@
 
 .main-nav__toggle {
   .size (20px, 14px);
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__wrapper {
   .min-size (320px, 79px);
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.main-nav__free-shipping {
+  display: none;
+  font-family: @font;
+  @media (min-width: @tablet-width) {
+    display: block;
+    .font-style (15px, normal, 1.6, right);
+    color: #444444;
+  }
+  @media (min-width: @desktop-width) {
+    display: block;
+    .font-style (15px, normal, 1.6, right);
+    color: #444444;
+  }
 }

@@ -1,7 +1,12 @@
 .user-list {
   list-style: none;
   margin: 0;
-  .min-size(320px, 79px*4);
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+  @media (min-width: @desktop-width) {
+    order: 3;
+  }
 }
 
 .user-list__link {
