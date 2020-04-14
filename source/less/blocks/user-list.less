@@ -3,16 +3,16 @@
   margin: 0;
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: flex-end;
+    width: 100%;
   }
   @media (min-width: @desktop-width) {
-    order: 3;
+    width: calc(50% - 55px);
   }
 }
 
 .user-list__link {
   display: inline-block;
-  padding-top: 32px;
-  padding-left: 76px;
   text-decoration: none;
   font-family: @font;
   .font-style (17px, bold, 1.41, left);

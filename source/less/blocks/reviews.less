@@ -1,7 +1,14 @@
 .reviews {
+  position: relative;
   padding: 45px 30px;
   margin: 0;
   font-family: @font;
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/review@1x.jpg");
+    background-repeat: no-repeat;
+  }
+  @media (min-width: @desktop-width) {
+  }
 }
 
 .reviews__title {
@@ -32,4 +39,22 @@
   }
 }
 
-//.reviews__button {}//
+.reviews__control {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.reviews__button {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}

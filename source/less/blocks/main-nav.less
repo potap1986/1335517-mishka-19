@@ -1,6 +1,12 @@
 .main-nav {
+  width: 80%;
   margin: 0;
   background-color: #ffffff;
+  @media (min-width: @tablet-width) {
+  }
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .main-nav__toggle {
@@ -20,20 +26,5 @@
     flex-wrap: wrap;
   }
   @media (min-width: @desktop-width) {
-  }
-}
-
-.main-nav__free-shipping {
-  display: none;
-  font-family: @font;
-  @media (min-width: @tablet-width) {
-    display: block;
-    .font-style (15px, normal, 1.6, right);
-    color: #444444;
-  }
-  @media (min-width: @desktop-width) {
-    display: block;
-    .font-style (15px, normal, 1.6, right);
-    color: #444444;
   }
 }

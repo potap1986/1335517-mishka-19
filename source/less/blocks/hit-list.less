@@ -6,6 +6,14 @@
   font-family: @font;
 }
 
+.hit-list__heading {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}
+
 .hit-list__title {
   .font-style (25px, bold, 1.2, left);
   color: black;
@@ -19,6 +27,22 @@
   .font-style (17px, bold, 1.18, left);
   text-transform: uppercase;
   color: #63d1bb;
+  @media (min-width: @tablet-width) {
+  }
+  @media (min-width: @desktop-width) {
+    order: -1;
+  }
+}
+
+.hit-list__wrapper {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 100%;
+    padding-right: 378px;
+  }
+  @media (min-width: @desktop-width) {
+    
+  }
 }
 
 .hit-list__text {
@@ -32,9 +56,20 @@
 }
 
 .hit-list__price {
+  display: block;
   padding: 29px 68px;
   .font-style (17px, bold, 1.41, center);
   color: #444444;
+}
+
+.hit-list__image {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  @media (min-width: @desktop-width) {
+  }
 }
 
 //.hit-list__button {}//

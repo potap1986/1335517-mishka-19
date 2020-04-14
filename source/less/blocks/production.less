@@ -1,8 +1,17 @@
 .production {
+  position: relative;
   padding: 30px 30px 58px 30px;
   margin: 0;
   .min-size (503px, 260px);
   font-family: @font;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: @desktop-width) {
+    min-height: 455px;
+    padding-left: 762px;
+  }
 }
 
 .production__title {
@@ -15,4 +24,31 @@
   color: #444444;
 }
 
-//.production__button {}//
+.production__video {
+  position: relative;
+  .size(260px, 150px);
+  @media (min-width: @tablet-width) {
+    order: -1;
+    .size(668px, 455px);
+  }
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .size(662px, 455px);
+  }
+}
+
+.production__start-video {
+  position: absolute;
+  top: 37px;
+  left: 80px;
+  @media (min-width: @tablet-width) {
+    top: 189px;
+    left: 283px;
+  }
+  @media (min-width: @desktop-width) {
+    top: 190px;
+    left: 291px;
+  }
+}

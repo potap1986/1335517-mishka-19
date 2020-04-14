@@ -3,6 +3,12 @@
   margin: 0;
   margin-top: 30px;
   font-family: @font;
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .item__link {
@@ -19,4 +25,14 @@
 .item__price {
   .font-style (15px, bold, 1.6, left);
   color: black;
+}
+
+.item__image {
+  .size(260px, 195px);
+  @media (min-width: @tablet-width) {
+    .size(334px, 334px);
+  }
+  @media (min-width: @desktop-width) {
+    .size(316px, 462px);
+  }
 }
