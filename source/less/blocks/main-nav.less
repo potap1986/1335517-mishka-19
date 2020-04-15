@@ -1,11 +1,35 @@
 .main-nav {
-  width: 80%;
-  margin: 0;
-  background-color: #ffffff;
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 110px;
   }
   @media (min-width: @desktop-width) {
-    width: 100%;
+  }
+}
+
+.main-nav__logo {  
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.main-nav__logo-image {
+  .min-size (86px, 35px);
+}
+
+.main-nav__free-shipping {
+  display: none;
+  font-family: @font;
+  @media (min-width: @tablet-width) {
+    display: block;
+    .font-style (15px, normal, 1.6, right);
+    color: #444444;
+    order: 1;
+  }
+  @media (min-width: @desktop-width) {
   }
 }
 
@@ -15,15 +39,12 @@
     display: none;
   }
   @media (min-width: @desktop-width) {
-    display: none;
   }
 }
 
-.main-nav__wrapper {
-  .min-size (260px, 79px);
+.main-nav__list {
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    flex-grow: 1;
   }
   @media (min-width: @desktop-width) {
   }

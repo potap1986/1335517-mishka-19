@@ -1,17 +1,12 @@
 .site-list {
   list-style: none;
-  margin: 0;
   @media (min-width: @tablet-width) {
-    position: absolute;
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    left: 50px;
-    top: 100px;
+    order: 1;
   }
   @media (min-width: @desktop-width) {
-    position: static;
-    width: calc(50% - 55px);
+    order: -1;
   }
 }
 
