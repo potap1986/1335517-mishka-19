@@ -1,8 +1,9 @@
 .contacts {
   position: relative;
-  padding: 44px 30px 40px 30px;
-  margin: 0;
   font-family: @font;
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+  }
 }
 
 .contacts__wrapper {
@@ -48,11 +49,12 @@
 }
 
 .contacts__map {
-  background-image: url(../../img/map-mobile@1x.jpg);
+  background-image: url(../img/map-mobile@1x.jpg);
   background-repeat: no-repeat;
+  margin: 0 auto;
   .size(322px, 457px);
   @media (min-width: @tablet-width) {
-    background-image: url(../../img/map-tablet@1x.jpg);
+    background-image: url(../img/map-tablet@1x.jpg);
     background-repeat: no-repeat;
     .size(768px, 457px);
   }
@@ -60,7 +62,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    background-image: url(../../img/map-desktop@1x.jpg);
+    background-image: url(../img/map-desktop@1x.jpg);
     background-repeat: no-repeat;
     .size(525px, 457px);
   }

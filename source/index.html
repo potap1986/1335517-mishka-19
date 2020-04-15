@@ -42,17 +42,19 @@
       </nav>
       <p class="page-header__free-shipping">Бесплатная доставка по России</p>
     </header>
-    <main class="page-main container">
-      <h1 class="page-main__title page-main__title--index">Милые штуки ручной работы для дома</h1>
+    <main class="page-main">
+      <div class="page-main__title-block">
+        <h1 class="page-main__title page-main__title--index container">Милые штуки ручной работы для дома</h1>
+      </div>
       <ul class="page-main__categories categories">
         <li class="categories__item categories__item--accessories">
-          <a class="categories__link" href="#">Предметы интерьера</a>
+          <a class="categories__link categories__link--accessories" href="#">Предметы интерьера</a>
         </li>
         <li class="categories__item categories__item--toys">
-          <a class="categories__link" href="#">Детские игрушки</a>
+          <a class="categories__link categories__link--toys" href="#">Детские игрушки</a>
         </li>
       </ul>
-      <section class="hit-list">
+      <section class="hit-list container">
         <div class="hit-list__heading">
           <h2 class="hit-list__title">Вязаные корзинки</h2>
           <span class="hit-list__mark">Товар недели</span>
@@ -78,7 +80,7 @@
           <a class="button hit-list__button" href="#">Заказать</a>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages container">
         <h2 class="advantages__title">Коротко о нас:</h2>
         <div class="advantages__wrapper">
           <ul class="advantages__list">
@@ -93,7 +95,7 @@
           </ul>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews container">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__slider">
           <div class="reviews__list">
@@ -110,7 +112,7 @@
         </div>
         <a class="button reviews__button" href="#">Написать</a>
       </section>
-      <div class="contacts">
+      <div class="contacts container">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
           <div class="contacts__table-wrapper">
@@ -134,24 +136,26 @@
         </div>
       </div>
     </main>
-    <footer class="page-footer container">
-      <img class="page-footer__logo" src="img/logo-footer.svg" alt="Логотип магазина Mishka" width="102" height="34">
-      <div class="page-footer__social social">
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Мы в Instagram</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Мы в Facebook</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Мы в Twitter</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <span class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></span>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper container">
+        <img class="page-footer__logo" src="img/logo-footer.svg" alt="Логотип магазина Mishka" width="102" height="34">
+        <div class="page-footer__social social">
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">Мы в Instagram</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">Мы в Facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#">Мы в Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <span class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></span>
+        </div>
       </div>
     </footer>
     <section class="modal-window">
