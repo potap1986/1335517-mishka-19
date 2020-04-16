@@ -1,19 +1,53 @@
 .form {
-  padding: 29px 30px 55px;
-  margin: 0;
   font-family: @font;
   background-color: #ffffff;
+}
+
+.form__block {
+  @media (min-width: @tablet-width) {
+    background-color: #f1f1f1;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.form__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+  @media (min-width: @desktop-width) {
+  }
 }
 
 .form__paragraph {
   .font-style (17px, bold, 0.94, left);
   text-transform: uppercase;
   color: #63d1bb;
+  @media (min-width: @tablet-width) {
+    flex-shrink: 0;
+    flex-basis: 217px;
+  }
+  @media (min-width: @desktop-width) {
+  }
 }
 
 .form__label {
   .font-style (17px, bold, 1.06, left);
   color: black;
+  &--fieldset {
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+      width: 250px;
+    }
+    @media (min-width: @desktop-width) {
+    }
+  }
+  &--name {
+    @media (min-width: @tablet-width) {
+    }
+    @media (min-width: @desktop-width) {
+    }
+  }
 }
 
 .form__legend {
@@ -22,14 +56,65 @@
 }
 
 .form__input {
+  display: block;
   .font-style (19px, normal, 0.95, left);
   color: #444444;
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
+  @media (min-width: @desktop-width) {
+  }
   &::placeholder {
     opacity: 1;
     color: rgba(68, 68, 68, 0.3);
   }
 }
 
-.form__button {
-  padding: 20px 46px;
+.form__radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: none;
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.form__user-name {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.form__legend {
+  display: flex;
+}
+
+.fomm__element {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.form__footer {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  @media (min-width: @desktop-width) {
+  }
 }

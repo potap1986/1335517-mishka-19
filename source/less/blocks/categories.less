@@ -1,11 +1,22 @@
 .categories {
+  list-style: none;
   padding: 0;
-  margin: 0;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding: 0 50px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: @desktop-width;
+  }
 }
 
 .categories__item {
-  padding: 30px 185px 30px 30px;
-  margin: 0;
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
+  @media (min-width: @desktop-width) {
+  }
 
   &--accessories {
     background-color: #63d1bb;
@@ -17,6 +28,8 @@
 }
 
 .categories__link {
+  display: block;
+  padding: 30px 185px 30px 30px;
   text-decoration: none;
   font-family: @font;
   .font-style (19px, bold, 1.26, left);

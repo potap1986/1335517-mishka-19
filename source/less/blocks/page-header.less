@@ -1,10 +1,13 @@
 .page-header {
-  margin: 0;
-  .min-size (320px, 79px);
+  min-height: 79px;
   background-color: #ffffff;
-}
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(to top, #f1f1f1 0%, #f9f9f9 40%, #ffffff 41%, #ffffff 100%,);
 
-.page-header__logo-image {
-  padding: 22px 117px;
-  .min-size (86px, 35px);
+    &--index {      
+    background-image: linear-gradient(to top, #f9f9f9 0%, #f9f9f9 40%, #ffffff 41%, #ffffff 100%,);
+    }
+  }
+  @media (min-width: @desktop-width) {
+  }
 }

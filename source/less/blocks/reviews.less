@@ -1,7 +1,27 @@
 .reviews {
-  padding: 45px 30px;
-  margin: 0;
+  position: relative;
   font-family: @font;
+  min-width: 320px;
+  padding: 0 30px;
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0 50px;
+    margin: 0 auto;
+    max-width: @desktop-width;
+  }
+}
+
+.reviews__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .reviews__title {
@@ -32,6 +52,22 @@
   }
 }
 
+.reviews__control {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+  }
+  @media (min-width: @desktop-width) {
+  }
+}
+
 .reviews__button {
-  padding: 20px 80px;
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+  }
+  @media (min-width: @desktop-width) {
+  }
 }

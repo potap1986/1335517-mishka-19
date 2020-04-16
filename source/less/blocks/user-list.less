@@ -1,16 +1,14 @@
-.site-list {
+.user-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    order: 1;
   }
   @media (min-width: @desktop-width) {
-    order: -1;
   }
 }
 
-.site-list__link {
+.user-list__link {
   display: inline-block;
   text-decoration: none;
   font-family: @font;

@@ -1,0 +1,17 @@
+.promo-list {
+  display: none;
+  list-style: none;
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+  
+.promo-list__link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: @font;
+  .font-style (15px, bold, 1.6, left);
+  color: black;
+}
