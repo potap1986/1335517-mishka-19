@@ -2,7 +2,59 @@
   font-family: @font;
 }
 
+.copyright__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    position: relative;
+  }
+}
+
 .copyright__text {
+  margin: 0;
+  padding: 28px 22px 28px 38px;
   .font-style (19px, bold, 0.95, left);
   color: black;
+
+  @media (min-width: @tablet-width) {
+    padding: 28px 56px 28px 38px;
+  }
+}
+
+.copyright__link svg {
+  .size(42px, 63px);
+
+  path {
+    fill: #63d1bb;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: -8px;
+    top: 8px;
+  }
+}
+
+.copyright__link:focus svg,
+.copyright__link:hover svg {
+  path {
+    fill: #46c1ae;
+  }
+}
+
+.copyright__link:active {
+  p {
+    opacity: 0.3;
+  }
+
+  svg {
+    opacity: 0.3;
+
+    path {
+      fill: #46c1ae;
+    }
+  }
 }

@@ -1,21 +1,49 @@
 .page-footer {
+  min-height: 160px;
   background-color: #f1f1f1;
+
+  @media (min-width: @desktop-width) {
+    min-height: 143px;
+  }
 }
 
 .page-footer__wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+
+    div {
+      flex-basis: 33.33%;
+    }
   }
+
   @media (min-width: @desktop-width) {
+    padding-bottom: 0;
   }
 }
 
 .page-footer__logo {
   display: none;
+
   @media (min-width: @tablet-width) {
     display: block;
+    .size(102px, 34px);
   }
-  @media (min-width: @desktop-width) {
+
+  :focus,
+  :hover {
+    path {
+      fill: #46c1ae;
+    }
+  }
+
+  :active {
+    opacity: 0.3;
+
+    path {
+      fill: #46c1ae;
+    }
   }
 }

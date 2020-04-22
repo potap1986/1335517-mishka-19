@@ -1,13 +1,25 @@
 .modal-window {
-  .size(320px, 336px);
-  padding: 36px 30px 46px;
+  .min-size(320px, 336px);
+  padding: 28px 30px 46px;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  border: solid 1px #c6c6c6;
   font-family: @font;
+
+  @media (min-width: @tablet-width) {
+    width: 566px;
+  }
 }
 
 .modal-window__title {
   padding: 0 55px;
   margin: 0;
+  margin-bottom: 13px;
   .font-style (25px, bold, 1.2, center);
   text-transform: uppercase;
   color: black;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 4px;
+    .font-style (30px, bold, 1.9, center);
+  }
 }
