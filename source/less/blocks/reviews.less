@@ -152,6 +152,15 @@
   border: solid 1px #ececec;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     width: 88px;
     border: none;
@@ -192,11 +201,13 @@
 .reviews__button {
   margin-left: auto;
   margin-right: auto;
+  .font-style (18px, bold, 1.11, center);
 
   @media (min-width: @tablet-width) {
     width: 175px;
     position: absolute;
     top: 81px;
     right: 50px;
+    .font-style (17px, bold, 1.18, center);
   }
 }
