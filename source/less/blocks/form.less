@@ -1,69 +1,383 @@
 .form {
   font-family: @font;
   background-color: #ffffff;
+  margin-bottom: 54px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .form__block {
   @media (min-width: @tablet-width) {
     background-color: #f1f1f1;
-  }
-  @media (min-width: @desktop-width) {
+
+    &--contacts {
+      padding-bottom: 28px;
+      padding-top: 46px;
+    }
   }
 }
 
 .form__item {
+  &--contacts {
+    div {
+      position: relative;
+      flex-grow: 1;
+
+      svg {
+        position: absolute;
+        right: 6px;
+        top: 0;
+        opacity: 0.2;
+
+        @media (min-width: @tablet-width) {
+          right: 23px;
+          top: 15px;
+        }
+
+        @media (min-width: @desktop-width) {
+          right: 6px;
+        }
+      }
+
+      @media (min-width: @desktop-width) {
+        flex-grow: 0;
+        flex-basis: 700px;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
+    padding-top: 47px;
+    padding-bottom: 30px;
+
+    &--contacts {
+      padding-top: 2px;
+      padding-bottom: 0;
+    }
   }
+
   @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-bottom: 27px;
+
+    &--contacts {
+      padding-top: 3px;
+      padding-bottom: 0;
+    }
   }
 }
 
 .form__paragraph {
+  display: flex;
+  padding: 19px 0;
   .font-style (17px, bold, 0.94, left);
   text-transform: uppercase;
   color: #63d1bb;
+
+  &::after {
+    content: "";
+    align-self: center;
+    height: 1px;
+    flex-grow: 1;
+    margin-left: 20px;
+    background-color: #63d1bb;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     flex-shrink: 0;
-    flex-basis: 217px;
+    flex-basis: 166px;
   }
+
   @media (min-width: @desktop-width) {
+    flex-basis: 116px;
+  }
+}
+
+.form__input-radio {
+  + .form__label--radio::before {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    content: "";
+    .size(40px, 40px);
+    background-color: transparent;
+    border: solid 2px #444444;
+    border-radius: 50%;
+    z-index: 2;
+
+    @media (min-width: @tablet-width) {
+      .size(53px, 53px);
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -1px;
+      top: 0;
+    }
+  }
+
+  &:checked + .form__label--radio::after {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    content: "";
+    .size(40px, 40px);
+    background-color: #62d1ba;
+    border: solid 12px white;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      border: solid 16px white;
+      .size(53px, 53px);
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -1px;
+      top: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    + .form__label--radio::before {
+      border: solid 2px #62d1ba;
+    }
+  }
+
+  &:active {
+    + .form__label--radio::before {
+      opacity: 0.3;
+      border: solid 2px #444444;
+    }
+  }
+}
+
+
+.form__input-checkbox {
+  + .form__label--fieldset::before {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    content: "";
+    .size(40px, 40px);
+    border: solid 2px #444444;
+    background-color: transparent;
+    z-index: 2;
+
+    @media (min-width: @tablet-width) {
+      top: 4px;
+      .size(53px, 53px);
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -2px;
+      top: 1px;
+    }
+  }
+
+  &:checked + .form__label--fieldset::after {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    content: "";
+    .size(40px, 40px);
+    z-index: 1;
+    background-image: url("../img/icon-tick.svg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      top: 4px;
+      .size(53px, 53px);
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -2px;
+      top: 1px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    + .form__label--fieldset::before {
+      border: solid 2px #62d1ba;
+    }
+  }
+
+  &:active {
+    + .form__label--fieldset::before {
+      opacity: 0.3;
+      border: solid 2px #444444;
+    }
   }
 }
 
 .form__label {
   .font-style (17px, bold, 1.06, left);
   color: black;
-  &--fieldset {
+
+  @media (min-width: @tablet-width) {
+    .font-style (19px, bold, 0.95, left);
+  }
+
+  &--radio {
+    position: relative;
+    padding: 15px 22px 12px 63px;
+    min-height: 57px;
+
     @media (min-width: @tablet-width) {
-      display: inline-block;
-      width: 250px;
-    }
-    @media (min-width: @desktop-width) {
+      padding: 16px 22px 12px 81px;
+      min-height: 76px;
     }
   }
-  &--name {
+
+  &--fieldset {
+    position: relative;
+    padding: 17px 22px 12px 61px;
+    min-height: 61px;
+
     @media (min-width: @tablet-width) {
+      display: inline-block;
+      width: 230px;
+      margin-right: 28px;
+      padding: 17px 22px 41px 79px;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
     }
+
     @media (min-width: @desktop-width) {
+      &:nth-of-type(2n) {
+        margin-right: 28px;
+      }
+    }
+  }
+
+  &--name {
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+
+    @media (min-width: @tablet-width) {
+      padding: 17px 0;
+      margin-right: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 20px 0;
     }
   }
 }
 
 .form__legend {
+  display: flex;
+  margin-bottom: 33px;
   .font-style (14px, normal, 1.14, left);
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    .font-style (17px, normal, 1.76, left);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 11px;
+    padding-right: 175px;
+  }
 }
 
 .form__input {
+  padding: 2px 5px 10px 0;
+  margin: 0;
+  margin-bottom: 13px;
+  min-height: 44px;
+  width: 100%;
   display: block;
-  .font-style (19px, normal, 0.95, left);
+  font-family: @font;
+  .font-style (17px, normal, 1.06, left);
   color: #444444;
+  border: none;
+  box-shadow: inset 0 -3px 0 -1px #000000;
+  cursor: pointer;
+
   @media (min-width: @tablet-width) {
-    flex-grow: 1;
+    padding: 11px 5px 19px 17px;
+    margin-bottom: 19px;
+    .font-style (19px, normal, 0.95, left);
   }
+
   @media (min-width: @desktop-width) {
+    padding: 14px 5px 15px 17px;
+    margin-bottom: 21px;
+    margin-right: 175px;
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: inset 0 -3px 0 -1px #62d1ba;
+
+    + svg {
+      opacity: 1;
+
+      path {
+        fill: #62d1ba;
+      }
+    }
+  }
+
+  &[name="phone"] {
+    padding: 2px 50px 12px 0;
+    min-height: 39px;
+    .font-style (19px, normal, 0.95, left);
+
+    @media (min-width: @tablet-width) {
+      padding: 14px 60px 16px 17px;
+      background-color: #f1f1f1;
+    }
+  }
+
+  &[name="email"] {
+    padding-right: 50px;
+
+    @media (min-width: @tablet-width) {
+      padding-right: 60px;
+      background-color: #f1f1f1;
+    }
+  }
+
+  &--textarea {
+    padding: 18px 17px;
+    margin-top: 6px;
+    box-shadow: inset 0 0 0 2px #000000;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: inset 0 0 0 2px #62d1ba;
+    }
+
+    @media (min-width: @tablet-width) {
+      margin-top: 4px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+    }
+  }
+
   &::placeholder {
     opacity: 1;
     color: rgba(68, 68, 68, 0.3);
@@ -80,32 +394,24 @@
   flex-direction: column;
   padding: 0;
   border: none;
+
   @media (min-width: @tablet-width) {
     display: block;
-  }
-  @media (min-width: @desktop-width) {
   }
 }
 
 .form__user-name {
   display: flex;
   flex-direction: column;
+
   @media (min-width: @tablet-width) {
     flex-grow: 1;
   }
-  @media (min-width: @desktop-width) {
-  }
 }
 
-.form__legend {
-  display: flex;
-}
-
-.fomm__element {
+.form__element {
   @media (min-width: @tablet-width) {
     display: flex;
-  }
-  @media (min-width: @desktop-width) {
   }
 }
 
@@ -115,6 +421,19 @@
     flex-direction: row-reverse;
     justify-content: space-between;
   }
+}
+
+.form__button {
+  margin-left: auto;
+  margin-right: auto;
+  .font-style (17px, bold, 0.94, center);
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    margin-left: 0;
+  }
+
   @media (min-width: @desktop-width) {
+    margin-left: 176px;
   }
 }

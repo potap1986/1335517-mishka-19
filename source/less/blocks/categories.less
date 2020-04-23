@@ -1,10 +1,13 @@
 .categories {
   list-style: none;
   padding: 0;
+  margin: 0;
+
   @media (min-width: @tablet-width) {
     display: flex;
     padding: 0 50px;
   }
+
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     max-width: @desktop-width;
@@ -12,10 +15,11 @@
 }
 
 .categories__item {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     flex-grow: 1;
-  }
-  @media (min-width: @desktop-width) {
+    flex-basis: 0;
   }
 
   &--accessories {
@@ -27,11 +31,70 @@
   }
 }
 
+.categories__item svg {
+  position: absolute;
+  top: 22px;
+  right: 8vw; //27px;
+  .size(60px, 62px);
+  opacity: 0.5;
+
+  path {
+    fill: #149080;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: 30px;
+    top: 30px;
+  }
+}
+
+.categories__item--accessories:focus,
+.categories__item--accessories:hover {
+  background-color: #59d5bc;
+
+  svg {
+    opacity: 0.7;
+  }
+}
+
+.categories__item--accessories:active {
+  background-color: #59d5bc;
+
+  .categories__link,
+  svg {
+    opacity: 0.3;
+  }
+}
+
+.categories__item--toys:focus,
+.categories__item--toys:hover {
+  background-color: #46c1ae;
+
+  svg {
+    opacity: 0.7;
+  }
+}
+
+.categories__item--toys:active {
+  background-color: #46c1ae;
+
+  .categories__link,
+  svg {
+    opacity: 0.3;
+  }
+}
+
 .categories__link {
   display: block;
-  padding: 30px 185px 30px 30px;
+  padding: 29px 185px 29px 9.5vw; //30px
   text-decoration: none;
   font-family: @font;
   .font-style (19px, bold, 1.26, left);
   color: white;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 29px 185px 41px 36px;
+    .font-style (20px, bold, 1.5, left);
+  }
 }
