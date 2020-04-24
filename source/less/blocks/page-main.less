@@ -62,11 +62,21 @@
     background-position-y: 21%;
     background-position-x: center;
 
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 640px auto;
+    }
+
     @media (min-width: @tablet-width) {
       min-height: 568px;
       padding: 95px 110px;
       background-image: url("../img/hero-tablet@1x.jpg");
       background-position-y: 33%;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/hero-tablet@2x.jpg");
+        background-size: 1536px auto;
+      }
 
       br {
         display: none;
@@ -76,6 +86,10 @@
     @media (min-width: @desktop-width) {
       padding: 95px 160px;
       background-image: url("../img/hero-desktop@1x.jpg");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/hero-desktop@2x.jpg");
+      }
     }
   }
 }
