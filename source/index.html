@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1"> 
     <title>HTML Academy: Мишка</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <div style="display:none">
@@ -104,7 +104,7 @@
             <img class="hit-list__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
           </picture>          
           <span class="hit-list__price">Цена: 990 руб.</span>
-          <a class="button hit-list__button" href="#">Заказать</a>
+          <a class="button hit-list__button modal-window__open" href="#">Заказать</a>
         </div>
       </section>
       <section class="advantages">
@@ -315,6 +315,23 @@
           navMain.classList.remove('main-nav--opened');
         }
       });
+    </script>
+    
+    <script>
+      var link = document.querySelector(".modal-window__open");
+      var popup = document.querySelector(".modal-window");
+
+      link.addEventListener("click", function (evt) {
+       evt.preventDefault();
+       popup.classList.add("modal-window__show");
+      });
+
+      document.addEventListener("keydown", function (evt) {
+       if (evt.keyCode === 27) {
+        evt.preventDefault();
+        popup.classList.remove("modal-window__show");
+       }
+      }); 
     </script>
   </body>
 </html>
