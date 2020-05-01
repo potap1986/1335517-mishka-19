@@ -36,8 +36,8 @@
 
   svg {
     position: absolute;
-    top: 27px;
-    left: 28px;
+    top: 30px;
+    left: 32px;
     .size(41px, 34px);
 
     path {
@@ -45,13 +45,13 @@
     }
 
     @media (min-width: @tablet-width) {
-      top: 32px;
-      left: 36px;
+      top: 35px;
+      left: 40px;
     }
 
     @media (min-width: @desktop-width) {
-      top: 43px;
-      left: 0;
+      top: 46px;
+      left: 4px;
     }
   }
 
@@ -132,7 +132,10 @@
 
   &:active {
     transform: scale(0.8);
-    opacity: 0.3;
+
+    .production__play-video svg {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: @tablet-width) {

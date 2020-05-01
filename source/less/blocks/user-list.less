@@ -95,19 +95,15 @@
   }
 }
 
-.user-list__item:focus .user-list__svg,
-.user-list__item:hover .user-list__svg {
-  opacity: 1;
-
-  path {
-    fill: #63d1bb;
+.user-list__item:focus,
+.user-list__item:hover {
+  .user-list__svg {
+    opacity: 1;
+    color: #63d1bb;
   }
 }
 
 .user-list__item:active .user-list__svg {
   opacity: 0.3;
-
-  path {
-    fill: #63d1bb;
-  }
+  color: #63d1bb;
 }
