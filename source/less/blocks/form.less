@@ -28,28 +28,28 @@
     div {
       position: relative;
       flex-grow: 1;
+    }
 
-      svg {
-        position: absolute;
-        right: 6px;
-        top: 0;
-        opacity: 0.2;
-        color: black;
+    svg {
+      position: absolute;
+      right: 6px;
+      top: 0;
+      opacity: 0.2;
+      color: black;
 
-        @media (min-width: @tablet-width) {
-          right: 23px;
-          top: 15px;
-        }
-
-        @media (min-width: @desktop-width) {
-          right: 6px;
-        }
+      @media (min-width: @tablet-width) {
+        right: 23px;
+        top: 15px;
       }
 
       @media (min-width: @desktop-width) {
-        flex-grow: 0;
-        flex-basis: 700px;
+        right: 6px;
       }
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-grow: 0;
+      flex-basis: 700px;
     }
   }
 

@@ -26,24 +26,20 @@
 
 .page-footer__logo {
   display: none;
+  color: black;
 
   @media (min-width: @tablet-width) {
     display: block;
     .size(102px, 34px);
   }
 
-  :focus,
-  :hover {
-    path {
-      fill: #46c1ae;
-    }
+  &:focus,
+  &:hover {
+    color: #46c1ae;
   }
 
-  :active {
+  &:active {
     opacity: 0.3;
-
-    path {
-      fill: #46c1ae;
-    }
+    color: #46c1ae;
   }
 }
