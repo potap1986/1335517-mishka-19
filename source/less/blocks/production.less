@@ -2,14 +2,16 @@
   position: relative;
   .min-size (260px, 503px);
   margin-bottom: 54px;
+  margin-top: 31px;
   font-family: @font;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 64px;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 62px;
+    margin-bottom: 56px;
   }
 }
 
@@ -57,7 +59,7 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
-    padding-top: 83px;
+    padding-top: 77px;
   }
 }
 
@@ -140,10 +142,7 @@
 
   &:active {
     transform: scale(0.8);
-
-    svg {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 }
 

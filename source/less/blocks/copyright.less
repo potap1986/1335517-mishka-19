@@ -3,35 +3,37 @@
 }
 
 .copyright__link {
+  position: relative;
   display: flex;
   align-items: center;
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
-    position: relative;
   }
 }
 
 .copyright__text {
   margin: 0;
-  padding: 28px 22px 28px 38px;
+  padding: 28px 103px 28px 38px;
   .font-style (19px, bold, 0.95, left);
   color: black;
 
   @media (min-width: @tablet-width) {
-    padding: 28px 56px 28px 38px;
+    padding: 29px 56px 20px 38px;
   }
 }
 
 .copyright__link svg {
-  .size(42px, 63px);
+  position: absolute;
+  .size(27px, 34px);
   color: #63d1bb;
+  right: 40px;
+  top: 22px;
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    right: -8px;
-    top: 8px;
+    right: 0;
+    top: 24px;
   }
 }
 
