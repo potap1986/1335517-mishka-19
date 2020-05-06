@@ -75,6 +75,7 @@
     padding-bottom: 27px;
 
     &--contacts {
+      width: 930px;
       padding-top: 3px;
       padding-bottom: 0;
       padding-right: 0;
@@ -368,14 +369,16 @@
   }
 
   &--textarea {
-    padding: 18px 17px;
+    padding: 16px 17px;
     margin-top: 6px;
-    box-shadow: inset 0 0 0 2px #000000;
+    border: 2px solid #000000;
+    box-shadow: none;
 
     &:hover,
     &:focus,
     &:active {
-      box-shadow: inset 0 0 0 2px #62d1ba;
+      border: 2px solid #62d1ba;
+      box-shadow: none;
     }
 
     @media (min-width: @tablet-width) {
