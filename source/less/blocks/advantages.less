@@ -2,7 +2,7 @@
   font-family: @font;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 77px;
+    padding-bottom: 78px;
   }
 
   @media (min-width: @desktop-width) {
@@ -15,7 +15,7 @@
 
 .advantages__header {
   position: relative;
-  padding-top: 68px;
+  padding-top: 69px;
 
   @media (min-width: @tablet-width) {
     padding-top: 75px;
@@ -83,13 +83,17 @@
     flex-grow: 1;
 
     &:first-of-type .advantages__item {
-      padding-right: 71px;
+      padding-right: 25px;
     }
   }
 
   @media (min-width: @desktop-width) {
     flex-grow: 0;
     flex-basis: 476px;
+
+    .advantages__item {
+      padding-right: 78px;
+    }
 
     &:first-of-type .advantages__item {
       margin-left: 126px;
@@ -114,10 +118,6 @@
     position: absolute;
     left: 4px;
     top: 33px;
-
-    path {
-      fill: #63d1bb;
-    }
 
     @media (min-width: @tablet-width) {
       left: 4px;

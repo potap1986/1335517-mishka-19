@@ -19,7 +19,7 @@
 .size-selection__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 31px;
 
@@ -30,14 +30,20 @@
 
 .size-selection__radio {
   + .size-selection__label {
-    flex-basis: 31%;
+    width: 31%;
+    margin-right: 7px;
+    margin-bottom: 10px;
     min-height: 52px;
     padding: 16px;
     .font-style (17px, bold, 0.94, center);
     color: #444444;
     border: solid 2px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+    background-color: hsl(0, 0%, 100%);
     cursor: pointer;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
 
     &:hover,
     &:focus {

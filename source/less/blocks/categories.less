@@ -5,6 +5,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     padding: 0 50px;
   }
 
@@ -48,6 +49,8 @@
 .categories__item--accessories:focus,
 .categories__item--accessories:hover {
   background-color: #59d5bc;
+  box-shadow: 0 5px 0 0 #59d5bc;
+  transform: translateY(-5px);
 
   svg {
     opacity: 0.7;
@@ -66,6 +69,8 @@
 .categories__item--toys:focus,
 .categories__item--toys:hover {
   background-color: #46c1ae;
+  box-shadow: 0 5px 0 0 #46c1ae;
+  transform: translateY(-5px);
 
   svg {
     opacity: 0.7;
@@ -83,6 +88,7 @@
 
 .categories__link {
   display: block;
+  min-height: 103px;
   padding: 29px 185px 29px 9.5vw; //30px
   text-decoration: none;
   font-family: @font;
@@ -92,6 +98,11 @@
 
   @media (min-width: @tablet-width) {
     padding: 29px 185px 41px 36px;
+    min-height: 129px;
     .font-style (20px, bold, 1.5, left);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 304px;
   }
 }

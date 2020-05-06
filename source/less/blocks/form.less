@@ -1,7 +1,7 @@
 .form {
   font-family: @font;
   background-color: #ffffff;
-  margin-bottom: 54px;
+  margin-bottom: 52px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 34px;
@@ -21,6 +21,12 @@
       padding-top: 46px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &--contacts {
+      padding-right: 225px;
+    }
+  }
 }
 
 .form__item {
@@ -28,28 +34,28 @@
     div {
       position: relative;
       flex-grow: 1;
+    }
 
-      svg {
-        position: absolute;
-        right: 6px;
-        top: 0;
-        opacity: 0.2;
-        color: black;
+    svg {
+      position: absolute;
+      right: 6px;
+      top: 0;
+      opacity: 0.2;
+      color: black;
 
-        @media (min-width: @tablet-width) {
-          right: 23px;
-          top: 15px;
-        }
-
-        @media (min-width: @desktop-width) {
-          right: 6px;
-        }
+      @media (min-width: @tablet-width) {
+        right: 23px;
+        top: 15px;
       }
 
       @media (min-width: @desktop-width) {
-        flex-grow: 0;
-        flex-basis: 700px;
+        right: 6px;
       }
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-grow: 0;
+      flex-basis: 700px;
     }
   }
 
@@ -69,8 +75,10 @@
     padding-bottom: 27px;
 
     &--contacts {
+      width: 930px;
       padding-top: 3px;
       padding-bottom: 0;
+      padding-right: 0;
     }
   }
 }
@@ -285,17 +293,21 @@
 .form__legend {
   display: flex;
   margin-bottom: 33px;
+  margin-top: 16px;
   .font-style (14px, normal, 1.14, left);
   color: #444444;
 
   @media (min-width: @tablet-width) {
     padding-top: 10px;
+    margin-top: 0;
+    margin-bottom: 28px;
     .font-style (17px, normal, 1.76, left);
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 11px;
     padding-right: 175px;
+    margin-bottom: 29px;
   }
 }
 
@@ -357,22 +369,26 @@
   }
 
   &--textarea {
-    padding: 18px 17px;
+    padding: 16px 17px;
     margin-top: 6px;
-    box-shadow: inset 0 0 0 2px #000000;
+    border: 2px solid #000000;
+    box-shadow: none;
 
     &:hover,
     &:focus,
     &:active {
-      box-shadow: inset 0 0 0 2px #62d1ba;
+      border: 2px solid #62d1ba;
+      box-shadow: none;
     }
 
     @media (min-width: @tablet-width) {
       margin-top: 4px;
+      margin-bottom: 25px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-top: 0;
+      margin-top: 4px;
+      margin-bottom: 22px;
     }
   }
 
