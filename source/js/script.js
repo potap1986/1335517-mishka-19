@@ -3,6 +3,7 @@ var navToggle = document.querySelector('.main-nav__toggle');
 var link = document.querySelector('.hit-list__button');
 var sale = document.querySelectorAll('.item__button');
 var popup = document.querySelector('.modal-window');
+var open = document.querySelector('.modal-window__show');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -30,9 +31,19 @@ for (var i=0; i<sale.length; i++) {
   });
 };
 
-document.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    popup.classList.remove('modal-window__show');
-  }
-});
+if (open) {
+  document.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      popup.classList.remove('modal-window__show');
+    }
+  });
+};
+
+if (open) {
+  document.addEventListener('click', function (evt) {
+    if (!evt.target.closest('.modal-window') && popup) {
+      popup.classList.remove('modal-window__show');
+    }
+  });
+};

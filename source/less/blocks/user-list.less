@@ -4,6 +4,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    width: 51.6%;
     background-color: #ffffff;
   }
 
@@ -20,6 +21,24 @@
   @media (min-width: @tablet-width) {
     min-width: 84px;
     box-shadow: -1px 0 0 0 #ececec;
+
+    &--search {
+      width: 21%;
+    }
+
+    &--bag {
+      width: 78%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--search {
+      width: 18%;
+    }
+
+    &--bag {
+      width: 67%;
+    }
   }
 }
 
